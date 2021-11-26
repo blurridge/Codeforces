@@ -1,0 +1,4 @@
+*.exe
+*.code-workspace
+test.c
+tempCodeRunnerFile.c
