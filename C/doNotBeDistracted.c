@@ -21,7 +21,7 @@ int main(){
 char *distractionCheck(char *taskOrder, int days){
     int letterDic[27] = { 0 }, i, flag = 0;
     char *answer;
-    for(i = 0; i < days; i++)
+    for(i = 0; i < days && flag == 0; i++)
     {
         if(i == 0)
             letterDic[taskOrder[i] - 65]++;
@@ -33,7 +33,6 @@ char *distractionCheck(char *taskOrder, int days){
         else if(taskOrder[i] != taskOrder[i - 1] && letterDic[taskOrder[i] - 65] > 0)
         {
             flag = 1;
-            break;
         }
     }
     answer = (flag == 1) ? strdup("NO") : strdup("YES");
