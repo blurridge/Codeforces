@@ -26,14 +26,9 @@ char *distractionCheck(char *taskOrder, int days){
         if(i == 0)
             letterDic[taskOrder[i] - 65]++;
         else if(taskOrder[i] != taskOrder[i - 1] && letterDic[taskOrder[i] - 65] == 0)
-        {
             letterDic[taskOrder[i] - 65]++;
-            flag = 0;
-        }
         else if(taskOrder[i] != taskOrder[i - 1] && letterDic[taskOrder[i] - 65] > 0)
-        {
             flag = 1;
-        }
     }
     answer = (flag == 1) ? strdup("NO") : strdup("YES");
     return answer;
