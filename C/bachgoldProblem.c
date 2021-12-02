@@ -9,16 +9,12 @@ int main(){
     if(numInput % 2 == 0)
     {
         for(i = 1; i <= numInput/2; i++)
-        {
             printf("2 ");
-        }
     }
     else
     {
         for(i = 1; i < numInput/2; i++)
-        {
             printf("2 ");
-        }
         printf("3");
     }
     return 0;
