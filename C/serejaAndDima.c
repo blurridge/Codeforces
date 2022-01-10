@@ -48,5 +48,5 @@ void getPlayerPoints(int *cardValues, int *sePoints, int *diPoints, int cases){
             }
         }
     count++;
-    }while(i != cases++);
+    }while(i != cases++);;
 }
